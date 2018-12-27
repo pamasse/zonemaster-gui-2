@@ -6,6 +6,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2Piwik } from 'angulartics2/piwik';
 
 import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
@@ -30,7 +31,7 @@ import { AppRoutingModule } from './app-routing.module';
     ShellModule,
     HomeModule,
     LoginModule,
-    Angulartics2Module.forRoot([]),
+    Angulartics2Module.forRoot([Angulartics2Piwik]),
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],
